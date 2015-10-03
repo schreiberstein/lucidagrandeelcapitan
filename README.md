@@ -11,11 +11,11 @@ A small Apple Automator application which makes it possible to use the tradition
 
 Font patch created by **Ken Yin** - https://twitter.com/iOSight
 
-Application and site created by **schreiberstein** <schreiberstein@gmail.com>
+Application and site created by **schreiberstein** -<schreiberstein@gmail.com
 
 
 **"Like"** on Facebook : **https://www.facebook.com/systemfontyos**
 
-**Tested on OS X 10.11.0 Yosemite (15A282a)**
+**Tested on OS X 10.11.0 El Capitan (15A282a)**
 
 **This application adds an additional font file - No system files are changed!**
