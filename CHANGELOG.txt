@@ -1,0 +1,7 @@
+lucidagrandeelcapitan
+====================
+
+Version 1.0
+- Initial release - tested on 10.11.0
+- Based on Lucida Grande Yosemite
+- New font patch by Ken Yin

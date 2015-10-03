@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>417</string>
+	<key>AMApplicationVersion</key>
+	<string>2.6</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>AppleScript ausführen</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}	# Initial system compatibility check	set mac_os_x_version to system version of (system info)	if mac_os_x_version does not start with "10.11" then		tell me to display alert "Attention!Your Mac OS X version appears to be different from 10.11 El Capitan.Please note that there is no use for this patch on OS X versions below 10.11 El Capitan, neither is it expected to work.Lucida Grande Yosemite is available here: https://github.com/schreiberstein/lucidagrandeyosemiteFuture versions of OS X may or may not work. Please check the following URL for updates :https://github.com/schreiberstein/lucidagrandeelcapitan If you encounter issues or you're able to confirm that this patch works properly on a new OS X (pre-)release, please give a feedback!"	end if	return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>835A3660-65B3-48E6-9D85-754758FBD9D6</string>
+				<key>Keywords</key>
+				<array>
+					<string>Ausführen</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>7E6D319B-D041-428D-9BE6-FD0EE5BB48D7</string>
+				<key>UUID</key>
+				<string>6997A005-268C-4AD9-BF34-7C1C7B0E17F9</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>859.000000:316.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>AppleScript ausführen</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}	# Display license information - Disclaimer	# Split into LICENSE_UPPER and _LOWER because it would consume too much space	# and AppleScript doesn't allow fancy dialogs with scroll bars, ... Looking for a better solution.	try		set LICENSE_UPPER to do shell script "head -13 " &amp; quoted form of ((POSIX path of (path to me) as text) &amp; "/Contents/Resources/LICENSE.txt")		set LICENSE_MIDDLE to do shell script "head -27 " &amp; quoted form of ((POSIX path of (path to me) as text) &amp; "/Contents/Resources/LICENSE.txt") &amp; " | tail -12"		set LICENSE_LOWER to do shell script "tail -20 " &amp; quoted form of ((POSIX path of (path to me) as text) &amp; "/Contents/Resources/LICENSE.txt")	on error		tell me to display alert "Attention!This application bundle was not properly equiped!Run 'Resources/finalize_package.sh' from source tree to equip the application with this file,or download a release version from :https://github.com/schreiberstein/lucidagrandeelcapitanThis shouldn't occur in an unmodified release version. If it does, please contact us!"		tell me to quit	end try	tell me to display alert LICENSE_UPPER	tell me to display alert LICENSE_MIDDLE	tell me to display dialog LICENSE_LOWER buttons {"I decline the terms and conditions", "I accept the terms and conditions"}	if button returned of result is not "I accept the terms and conditions" then		tell me to display alert "In order to use this software, you have to accept the license."		tell me to quit	end if		return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>Disabled</key>
+				<false/>
+				<key>InputUUID</key>
+				<string>5591F46F-1A8E-4D91-BA1F-8C9112AEDDEE</string>
+				<key>Keywords</key>
+				<array>
+					<string>Ausführen</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>B31D04C4-B274-4B16-8FB1-A25DAF2CE57E</string>
+				<key>UUID</key>
+				<string>483498C7-DD7A-425B-872B-9A7B009DC478</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>859.000000:562.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>AppleScript ausführen</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string># lucidagrandeelcapitan - https://github.com/schreiberstein/lucidagrandeelcapitan# Version 1.0# Application created by Alexander Schreiber - schreiberstein &lt;schreiberstein@gmail.com&gt;# Font modification created by Ken Yin &lt;https://twitter.com/iOSight&gt;# Terms of BSD license apply - see 'LICENSE.txt' for more informationon run {input, parameters}		# ---------- START DECLARATIONS ----------			# Obtain the UNIX path to this application	set path_to_app to POSIX path of (path to me) as text		# Checksum of the Lucida Grande font family (LucidaGrande.ttc) - the subject of the patch	set lucidagrande_ttc_1 to "dd588813e0c71bdfca38f0a5da36d03b"		# Path to AES-encrypted patch (modsysfontelc.patch.enc)	set path_to_enc_patch to quoted form of POSIX path of path_to_app &amp; "/Contents/Resources/modsysfontelc.patch.enc"		# Path to MD5-file of AES-ENcrypted patch (allows quick updates of the patch without touching this script)	set path_to_enc_patch_md5 to quoted form of POSIX path of path_to_app &amp; "/Contents/Resources/modsysfontelc.enc.md5.txt"	# Path to MD5-file of AES-DEcrypted patch (allows quick updates of the patch without touching this script)	set path_to_dec_patch_md5 to quoted form of POSIX path of path_to_app &amp; "/Contents/Resources/modsysfontelc.dec.md5.txt"	# Path to MD5-file of the modified font family (allows quick updates of the patch without touching this script)	set path_to_font_family_md5 to quoted form of POSIX path of path_to_app &amp; "/Contents/Resources/LucidaGrande_modsysfontelc_md5.txt"			# ---------- END DECLARATIONS ----------		# ---------- START OBTAINING CHECKSUMS ----------			# CHECKSUM of : enc_patch	try		set enc_patch_md5 to do shell script ("cat " &amp; path_to_enc_patch_md5)	on error		tell me to display alert "Attention!'modsysfontelc.enc.md5.txt' cannot be read from/Contents/Resources/Run 'Resources/finalize_package.sh' from source tree to equip the application with this file!This shouldn't occur in an unmodified relase version. If it does, please contact us!"		tell me to quit	end try		# CHECKSUM of : dec_patch	try		set dec_patch_md5 to do shell script ("cat " &amp; path_to_dec_patch_md5)	on error		tell me to display alert "Attention!'modsysfontelc.dec.md5.txt' cannot be read from/Contents/Resources/Run 'Resources/finalize_package.sh' from source tree to equip the application with this file!This shouldn't occur in an unmodified relase version. If it does, please contact us!"		tell me to quit	end try		# CHECKSUM of : font_family	try		set font_family_md5 to do shell script ("cat " &amp; path_to_font_family_md5)	on error		tell me to display alert "Attention!'LucidaGrande_modsysfontelc_md5.txt' cannot be read from/Contents/Resources/Run 'Resources/finalize_package.sh' from source tree to equip the application with this file!This shouldn't occur in an unmodified relase version. If it does, please contact us!"		tell me to quit	end try		# CHECKSUM of : system_font_family	try		set system_font_family to do shell script ("md5 /System/Library/Fonts/LucidaGrande.ttc")	on error		tell me to display alert "Attention!'LucidaGrande.ttc' font family appears to be missing on your system! Report back if you're facing this issue on an unreleased Version of OS X. If not, your OS X fonts appear to be broken."		tell me to quit	end try		# CHECKSUM of : modsysfontyelc.patch.enc (encrypted font patch)	try		set modsysfontyos_patch_enc to do shell script ("md5 " &amp; path_to_enc_patch)	on error		tell me to display alert "Attention!'modsysfontelc.patch.enc' cannot be read from/Contents/Resources/Run 'Resources/finalize_package.sh' from source tree to equip the application with this file!This shouldn't occur in an unmodified relase version. If it does, please contact us!"		tell me to quit	end try			# ---------- END OBTAINING CHECKSUMS ----------		# ---------- START COMPARING CHECKSUMS ---------- #		# Compare encrypted font patch with given MD5-sum	try		if enc_patch_md5 is not in modsysfontyos_patch_enc then			tell me to display alert ("Checksum of patch is wrong!Is : " &amp; modsysfontelc_patch_enc &amp; " Should be : " &amp; enc_patch_md5 &amp; "If you're trying to incorporate a new patch, please adjust the '_md5.txt' files accordingly. If not, there is something wrong with this file. Please proceed and download the latest release version from :https://github.com/schreiberstein/lucidagrandeelcapitan")			tell me to quit		end if	on error		tell me to display alert "Failed comparing checksums!"	end try			# Compare system font 'LucidaGrande.ttc' with given MD5-sum	try		if lucidagrande_ttc_1 is not in system_font_family then			tell me to display alert ("A different version of OS X system font Lucida Grande ('LucidaGrande.ttc') has been detected on your system.The patch is not compatible with your system.Please proceed and download the latest release version from :https://github.com/schreiberstein/lucidagrandeelcapitanIn case you're using an unreleased version of OS X, please report back!")			tell me to quit		end if	on error		tell me to quit	end try			# ---------- END COMPARING CHECKSUMS ----------#		# Main menu with subroutines for installing, removing and exiting	display dialog "Lucida Grande El Capitan	This application installs a patched version of'Lucida Grande', the former Mac OS X default font, but won't change any system files.The created, patched font-file will be used as system font (Menu bar, Dock, ...).Press one of the buttons to continue.Font modification created by 'Ken Yin' &lt;https://twitter.com/iOSight&gt;Application created by Alexander Schreiber - 'schreiberstein'GitHub page : https://github.com/schreiberstein/lucidagrandeelcapitanFacebook : https://www.facebook.com/systemfontyosTested on OS X El Capitan 10.11.0 (15A282a)Version 1.0By using this software you accept the terms and conditions mentioned in the 'LICENSE.txt' file, which is displayed at the start of this application." buttons {"Patch &amp; Install &amp; Clear font cache", "Uninstall &amp; Clear font cache", "Exit"}	set ui_choice to button returned of result		# Subroutine for installing the modified font	if ui_choice = "Patch &amp; Install &amp; Clear font cache" then		tell application "Finder"			# Silently remove previous Lucida Grande Yosemite installation			if exists POSIX file "/Library/Fonts/LucidaGrande_modsysfontyos.ttc" then				do shell script "rm /Library/Fonts/LucidaGrande_modsysfontyos.ttc" with administrator privileges			end if						if exists POSIX file "/Library/Fonts/LucidaGrande_modsysfontelc.ttc" then								# Check for outdated or broken versions				if font_family_md5 is in (do shell script "md5 /Library/Fonts/LucidaGrande_modsysfontelc.ttc") then					tell me to display alert "Already installed!"				else					tell me to display alert "Older or broken version of font modification detected! Run 'Uninstall' to remove it and run 'Install' again in case you would like to update."				end if			else				# Decrypting font-patch : modsysfontelc.patch.enc -&gt; modsysfontelc.patch				try					do shell script ("openssl aes-256-cbc -d -in " &amp; path_to_enc_patch &amp; " -out /tmp/modsysfontelc.patch -pass file:/System/Library/Fonts/LucidaGrande.ttc")					onerror					tell me to display alert "Unable to decrypt patch!The OpenSSL statement failed. Please report back in case this happens in a release version."					tell me to quit				end try								try					do shell script ("bspatch /System/Library/Fonts/LucidaGrande.ttc /Library/Fonts/LucidaGrande_modsysfontelc.ttc /tmp/modsysfontelc.patch ; /usr/bin/atsutil databases -remove") with administrator privileges					onerror					tell me to display alert "Patching or clearing font cache failed! Internal error! Please report back in case this happens in a release version."					tell me to quit				end try								if font_family_md5 is in (do shell script "md5 /Library/Fonts/LucidaGrande_modsysfontelc.ttc") then					do shell script "killall Dock"					tell me to display alert "Successfully installed! Logout or restart for changes to take effect!"				else					tell me to display alert "Internal error or installed, but checksum of targetfile differs - likely to result in a broken font! 'Uninstall' and try again. Please report back in case this happens in a release version."				end if							end if		end tell	end if		# Subroutine for removing the modified font	if ui_choice = "Uninstall &amp; Clear font cache" then		tell application "Finder"			if exists POSIX file "/Library/Fonts/LucidaGrande_modsysfontelc.ttc" then				try					do shell script "rm /Library/Fonts/LucidaGrande_modsysfontelc.ttc ; /usr/bin/atsutil databases -remove" with administrator privileges					do shell script "killall Dock"					tell me to display alert "Uninstalled and font cache cleared successfully!"					tell me to quit				on error					tell me to display alert "Internal error!Uninstallation might be incomplete!"					tell me to quit				end try			else				tell me to display alert "Already uninstalled!Clearing font cache ..."				try					do shell script "/usr/bin/atsutil databases -remove" with administrator privileges					tell me to display alert "Font cache cleared!"				on error					tell me to display alert "Internal error! Unable to clear font cache ..."					tell me to quit				end try			end if		end tell	end if		# Subroutine for exiting	if ui_choice = "Exit" then		tell me to quit	end if		return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>71187C6A-16F8-45E9-9BED-F07AFB015BAE</string>
+				<key>Keywords</key>
+				<array>
+					<string>Ausführen</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>3CFD3AB6-4BC7-4EDE-89C1-7624E014CFBA</string>
+				<key>UUID</key>
+				<string>48A3EA3B-015C-44C7-8697-25BC219AC3BD</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>859.000000:992.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>7B836E97-E269-4FF1-92AE-7C2E797D3BC4</key>
+		<dict>
+			<key>from</key>
+			<string>483498C7-DD7A-425B-872B-9A7B009DC478 - 483498C7-DD7A-425B-872B-9A7B009DC478</string>
+			<key>to</key>
+			<string>48A3EA3B-015C-44C7-8697-25BC219AC3BD - 48A3EA3B-015C-44C7-8697-25BC219AC3BD</string>
+		</dict>
+		<key>FE2BCC9E-8099-42E4-8D85-CCAE61DEE5CF</key>
+		<dict>
+			<key>from</key>
+			<string>6997A005-268C-4AD9-BF34-7C1C7B0E17F9 - 6997A005-268C-4AD9-BF34-7C1C7B0E17F9</string>
+			<key>to</key>
+			<string>483498C7-DD7A-425B-872B-9A7B009DC478 - 483498C7-DD7A-425B-872B-9A7B009DC478</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
