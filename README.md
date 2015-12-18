@@ -1,6 +1,12 @@
 lucidagrandeelcapitan
 ====================
 
+**ATTENTION! - There are issues that we (apparently) can't work around at this time.**
+
+The font patch works, but there are visible artifacts and it doesn't integrate as smoothly as it did back in Yosemite.
+
+
+
 A small Apple Automator application which makes it possible to use the traditional Mac OS X system-font "Lucida Grande" on OS X 10.11 El Capitan.
 
 **Download : https://goo.gl/33KNpm (Version 1.0)**
