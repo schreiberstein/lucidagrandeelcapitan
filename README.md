@@ -1,6 +1,9 @@
 lucidagrandeelcapitan
 ====================
 
+**Check out the updated version for MacOS made by my partner Kay Yin: https://github.com/HiKay/macOSLucidaGrande**
+
+
 **ATTENTION! - There are issues that we (apparently) can't work around at this time.**
 
 The font patch works, but there are visible artifacts and it doesn't integrate as smoothly as it did back in Yosemite.
